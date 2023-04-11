@@ -24,6 +24,10 @@ By default, `npm run build` will generate a Node app that you can run with `npm 
 - [ ] setup Prettier (maybe eslint)
 - [ ] setup git hooks + lint-staged
 - [ ] setup vitest
-- [ ] setup paths
-- [ ] move some shared components
-- [ ] add tremec logos
+- [x] setup paths
+- [x] move some shared components
+- [x] add tremec logos
+- [ ] add contact form
+- [ ] move text to settings
+- [ ] add a CTA
+- [ ] add some animation
