@@ -62,7 +62,7 @@ function NavBar() {
         </div>
 
         <div>
-          <ButtonLink to="/#">Join US</ButtonLink>
+          <ButtonLink to="#contact">Join US</ButtonLink>
         </div>
       </Container>
     </nav>
