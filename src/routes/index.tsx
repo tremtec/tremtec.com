@@ -1,3 +1,4 @@
+import { createRouteAction } from "solid-start";
 import { z } from "zod";
 import { zfd } from "zod-form-data";
 import { Container } from "~/components/shared";
@@ -37,6 +38,21 @@ const contactFormSchema = zfd.formData({
 })
 
 export default function Home() {
+  const [_, { Form }] = createRouteAction(async (formData: FormData) => {
+    const { email, message, subject } = await contactFormSchema.parseAsync(formData);
+    // FIXME: handle error and show on the screen
+
+    const params = new URLSearchParams({
+      subject,
+      cc: email,
+      body: message,
+    });
+
+    const mailtoURL = `mailto:root@tremtec.com?${params.toString()}`
+    // open mailto URL
+    window.location.replace(mailtoURL)
+  })
+
   return (
     <main class="text-center mx-auto p-4">
       <Container class=" grid gap-16">
