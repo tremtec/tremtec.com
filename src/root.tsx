@@ -13,34 +13,20 @@ import {
   Scripts,
   Title,
 } from "solid-start";
+import { Logo } from "./components/icons";
+import { ButtonLink, Container } from "./components/shared";
 import "./root.css";
 
 export default function Root() {
-  const location = useLocation();
-  const active = (path: string) =>
-    path == location.pathname
-      ? "border-sky-600"
-      : "border-transparent hover:border-sky-600";
+  const theme = "dark";
   return (
-    <Html lang="en">
-      <Head>
-        <Title>SolidStart - With TailwindCSS</Title>
-        <Meta charset="utf-8" />
-        <Meta name="viewport" content="width=device-width, initial-scale=1" />
-      </Head>
-      <Body>
+    <Html lang="en" class={theme}>
+      <Metadata />
+
+      <Body class="dark:bg-indigo-900 dark:text-gray-200">
         <Suspense>
           <ErrorBoundary>
-            <nav class="bg-sky-800">
-              <ul class="container flex items-center p-3 text-gray-200">
-                <li class={`border-b-2 ${active("/")} mx-1.5 sm:mx-6`}>
-                  <A href="/">Home</A>
-                </li>
-                <li class={`border-b-2 ${active("/about")} mx-1.5 sm:mx-6`}>
-                  <A href="/about">About</A>
-                </li>
-              </ul>
-            </nav>
+            <NavBar />
             <Routes>
               <FileRoutes />
             </Routes>
@@ -50,4 +36,35 @@ export default function Root() {
       </Body>
     </Html>
   );
+}
+
+function Metadata() {
+  return (
+    <Head>
+      <Title>TremTec</Title>
+      <Meta charset="utf-8" />
+      <Meta name="viewport" content="width=device-width, initial-scale=1" />
+    </Head>
+  )
+}
+
+function NavBar() {
+  return (
+    <nav>
+      <Container class="flex flex-row justify-between items-center py-4">
+        <div class="flex">
+          <A href="/" class="flex">
+            <div class="flex items-center gap-2">
+              <Logo size="sm" />
+              <h3 class="font-medium">TremTec</h3>
+            </div>
+          </A>
+        </div>
+
+        <div>
+          <ButtonLink to="/#">Join US</ButtonLink>
+        </div>
+      </Container>
+    </nav>
+  )
 }
