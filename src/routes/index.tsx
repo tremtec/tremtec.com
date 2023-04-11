@@ -1,3 +1,5 @@
+import { z } from "zod";
+import { zfd } from "zod-form-data";
 import { Container } from "~/components/shared";
 
 type Service = {
@@ -27,6 +29,12 @@ const services: Service[] = [
       "Improve your team's business acumen and increase productivity with our tailored training programs.",
   },
 ];
+
+const contactFormSchema = zfd.formData({
+  email: zfd.text(z.string().min(6).max(50)),
+  subject: zfd.text(z.string().min(8).max(120)),
+  message: zfd.text(z.string().min(10).max(400)),
+})
 
 export default function Home() {
   return (
