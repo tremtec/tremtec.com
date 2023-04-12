@@ -28,6 +28,6 @@ By default, `npm run build` will generate a Node app that you can run with `npm 
 - [x] add tremec logos
 - [x] add contact form
 - [x] add a CTA
+- [x] move text to settings
 - [ ] setup vitest
-- [ ] move text to settings
 - [ ] add some animation
