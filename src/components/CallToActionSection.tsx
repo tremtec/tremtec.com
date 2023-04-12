@@ -10,13 +10,13 @@ export default function CallToActionSection() {
       </h1>
       <div class="flex gap-8 justify-center">
         <ButtonLink
-          to="#contact"
+          to={siteTexts.links.contact}
           class="border-orange-300 text-orange-300 hover:border-orange-500 hover:text-orange-500"
         >
           {siteTexts.ctaPrimaryBtn}
         </ButtonLink>
         <ButtonLink
-          to="#services"
+          to={siteTexts.links.services}
           class="border-blue-300 text-blue-300 hover:border-blue-400 hover:text-blue-400"
         >
           {siteTexts.ctaSecondaryBtn}

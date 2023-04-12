@@ -21,6 +21,10 @@ export const siteTexts = {
     description:
       "TremTec is a tech acceletrator which will ensure a sustainable growth to your startup",
   },
+  links: {
+    contact: "/#contact",
+    services: "/#services",
+  },
   companyName: "TremTec",
   ctaPrimaryBtn: "Join Us",
   ctaSecondaryBtn: "But how?",

@@ -63,7 +63,9 @@ function NavBar() {
         </div>
 
         <div>
-          <ButtonLink to="#contact">{siteTexts.ctaPrimaryBtn}</ButtonLink>
+          <ButtonLink to={siteTexts.links.contact}>
+            {siteTexts.ctaPrimaryBtn}
+          </ButtonLink>
         </div>
       </Container>
     </nav>

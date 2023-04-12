@@ -1,10 +1,13 @@
 import { For } from "solid-js";
-import { services } from "~/settings";
+import { services, siteTexts } from "~/settings";
 
 export default function ServiceSection() {
   return (
     <>
-      <h2 class="text-2xl font-semibold md:py-8" id="services">
+      <h2
+        class="text-2xl font-semibold md:py-8"
+        id={siteTexts.links.services.slice(2)}
+      >
         We can help you with...
       </h2>
 
