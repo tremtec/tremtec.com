@@ -27,7 +27,7 @@ By default, `npm run build` will generate a Node app that you can run with `npm 
 - [x] setup paths
 - [x] move some shared components
 - [x] add tremec logos
-- [ ] add contact form
+- [x] add contact form
 - [ ] move text to settings
 - [ ] add a CTA
 - [ ] add some animation
