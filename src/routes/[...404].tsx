@@ -17,4 +17,3 @@ export const Page404: Component = () => {
 };
 
 export default Page404;
-

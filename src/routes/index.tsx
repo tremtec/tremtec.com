@@ -12,7 +12,7 @@ export default function Home() {
 
           <ServiceSection />
         </Container>
-      </main >
+      </main>
 
       <ContactSection />
     </>

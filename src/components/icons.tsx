@@ -24,13 +24,7 @@ export function Logo(props: Props) {
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
     >
-      <circle
-        cx="130.5"
-        cy="115.5"
-        r="101.5"
-        stroke={fill}
-        stroke-width="13"
-      />
+      <circle cx="130.5" cy="115.5" r="101.5" stroke={fill} strokeWidth="13" />
       <path
         d="M0 107.978L12.146 90.6934L128.467 69.2044L118.19 85.0876L78.0146 93.0292V161.234L64.4671 164.036V95.8321L15.4161 104.708L0 107.978Z"
         fill={fill}

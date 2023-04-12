@@ -13,7 +13,11 @@ export interface ButtonProps extends ContainerProps {
 }
 
 export const Container: Component<ContainerProps> = (props) => {
-  return <div class={`max-w-4xl px-8 mx-auto ${props.class ?? ""}`}>{props.children}</div>;
+  return (
+    <div class={`max-w-4xl px-8 mx-auto ${props.class ?? ""}`}>
+      {props.children}
+    </div>
+  );
 };
 
 export const buttonStyle = `
@@ -45,4 +49,3 @@ export function NotFound(props: ChildrenProps) {
     </div>
   );
 }
-

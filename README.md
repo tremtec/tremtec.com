@@ -21,13 +21,13 @@ By default, `npm run build` will generate a Node app that you can run with `npm 
 
 ## Tasks
 
-- [x] setup linter (eslint)
-- [ ] setup git hooks + lint-staged
-- [ ] setup vitest
+- [x] setup linter (eslint + prettier)
+- [x] setup git hooks + lint-staged
 - [x] setup paths
 - [x] move some shared components
 - [x] add tremec logos
 - [x] add contact form
+- [x] add a CTA
+- [ ] setup vitest
 - [ ] move text to settings
-- [ ] add a CTA
 - [ ] add some animation
