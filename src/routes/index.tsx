@@ -58,7 +58,7 @@ export default function Home() {
     <>
       <main class="text-center mx-auto p-4 my-24">
         <Container class=" grid gap-16">
-          <h1 class="max-6-xs text-6xl text-white font-thin my-36 xl:my-48">
+          <h1 class="max-6-xs text-6xl text-white font-thin my-32 md:my-40 xl:my-48">
             <p> Build <span class="text-sky-400">your produt</span> </p>
             <p> Leave the tech <span class="text-sky-400">with us</span> </p>
           </h1>
