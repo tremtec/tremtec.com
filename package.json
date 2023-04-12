@@ -4,6 +4,7 @@
     "dev": "solid-start dev",
     "build": "pnpm fmt && solid-start build",
     "fmt": "eslint --fix src",
+    "prepare": "husky install",
     "start": "solid-start start"
   },
   "type": "module",
@@ -15,7 +16,10 @@
     "eslint-config-prettier": "^8.8.0",
     "eslint-plugin-prettier": "^4.2.1",
     "eslint-plugin-solid": "^0.12.0",
+    "husky": "^8.0.3",
+    "lint-staged": "^13.2.1",
     "postcss": "^8.4.21",
+    "prettier": "^2.8.7",
     "solid-start-node": "^0.2.26",
     "solid-start-vercel": "^0.2.26",
     "tailwindcss": "^3.2.4",
