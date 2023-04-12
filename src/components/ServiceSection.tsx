@@ -8,7 +8,7 @@ export default function ServiceSection() {
         class="text-2xl font-semibold md:py-8"
         id={siteTexts.links.services.slice(2)}
       >
-        We can help you with...
+        {siteTexts.serviceTitle}
       </h2>
 
       <div class="grid grid-cols-1 md:grid-cols-2 gap-24 md:gap-12">
