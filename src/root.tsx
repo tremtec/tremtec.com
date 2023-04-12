@@ -15,6 +15,7 @@ import {
 import { Logo } from "./components/icons";
 import { ButtonLink, Container } from "./components/shared";
 import "./root.css";
+import { siteTexts } from "./settings";
 
 export default function Root() {
   const theme = "dark";
@@ -40,9 +41,10 @@ export default function Root() {
 function Metadata() {
   return (
     <Head>
-      <Title>TremTec</Title>
+      <Title>{siteTexts.meta.title}</Title>
       <Meta charset="utf-8" />
       <Meta name="viewport" content="width=device-width, initial-scale=1" />
+      <Meta name="description" content={siteTexts.meta.description} />
     </Head>
   );
 }
@@ -55,13 +57,15 @@ function NavBar() {
           <A href="/" class="flex">
             <div class="flex items-center gap-2">
               <Logo size="sm" />
-              <h3 class="font-medium">TremTec</h3>
+              <h3 class="font-medium">{siteTexts.companyName}</h3>
             </div>
           </A>
         </div>
 
         <div>
-          <ButtonLink to="#contact">Join US</ButtonLink>
+          <ButtonLink to={siteTexts.links.contact}>
+            {siteTexts.ctaPrimaryBtn}
+          </ButtonLink>
         </div>
       </Container>
     </nav>
