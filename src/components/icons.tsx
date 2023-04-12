@@ -1,30 +1,25 @@
+import { createMemo } from "solid-js";
+
 type Sizes = "base" | "sm" | "lg";
 
 interface Props {
-  size?: Sizes;
+  size: Sizes;
 }
 
-function getWidthBySize(size: Sizes) {
-  switch (size) {
-    case "sm":
-      return 32;
-    case "base":
-      return 64;
-    case "lg":
-      return 80;
-  }
-}
+const widthMap: Record<Sizes, number> = {
+  sm: 32,
+  base: 64,
+  lg: 80,
+};
 
-export function Logo({ size = "base" }: Props) {
-  const width = getWidthBySize(size);
-  // const stroke = "#353535";
-  // const fill = "#0B1527";
+export function Logo(props: Props) {
+  const width = createMemo(() => widthMap[props.size]);
   const fill = "white";
   const stroke = "#0B1527";
   return (
     <svg
-      width={width}
-      height={width}
+      width={width()}
+      height={width()}
       viewBox="0 0 256 223"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"

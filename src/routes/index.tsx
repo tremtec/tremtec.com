@@ -1,3 +1,4 @@
+import { For } from "solid-js";
 import { createRouteAction } from "solid-start";
 import { z } from "zod";
 import { zfd } from "zod-form-data";
@@ -35,10 +36,10 @@ const contactFormSchema = zfd.formData({
   email: zfd.text(z.string().min(6).max(50)),
   subject: zfd.text(z.string().min(8).max(120)),
   message: zfd.text(z.string().min(10).max(400)),
-})
+});
 
 export default function Home() {
-  const [_, { Form }] = createRouteAction(async (formData: FormData) => {
+  const [, { Form }] = createRouteAction(async (formData: FormData) => {
     const { email, message, subject } = await contactFormSchema.parseAsync(formData);
     // FIXME: handle error and show on the screen
 
@@ -48,10 +49,10 @@ export default function Home() {
       body: message,
     });
 
-    const mailtoURL = `mailto:root@tremtec.com?${params.toString()}`
+    const mailtoURL = `mailto:root@tremtec.com?${params.toString()}`;
     // open mailto URL
-    window.location.replace(mailtoURL)
-  })
+    window.location.replace(mailtoURL);
+  });
 
   return (
     <>
@@ -65,12 +66,14 @@ export default function Home() {
           <h2 class="text-2xl font-semibold">We can help you with...</h2>
 
           <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
-            {services.map((service) => (
-              <div>
-                <h3 class="text-xl py-4">{service.title}</h3>
-                <p class="text-md text-gray-400">{service.description}</p>
-              </div>
-            ))}
+            <For each={services}>
+              {(service) => (
+                <div>
+                  <h3 class="text-xl py-4">{service.title}</h3>
+                  <p class="text-md text-gray-400">{service.description}</p>
+                </div>
+              )}
+            </For>
           </div>
         </Container>
       </main >
@@ -90,7 +93,7 @@ export default function Home() {
             </div>
             <div class="sm:col-span-2">
               <label for="message" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-400">Your message</label>
-              <textarea id="message" rows="6" name="message" class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg shadow-sm border border-gray-300 focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Leave a comment..."></textarea>
+              <textarea id="message" rows="6" name="message" class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg shadow-sm border border-gray-300 focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Leave a comment..." />
             </div>
             <button type="submit" class="py-3 px-5 text-sm font-medium text-center text-white rounded-lg bg-primary-700 sm:w-fit hover:bg-primary-800 focus:ring-4 focus:outline-none focus:ring-primary-300 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800">Send message</button>
           </Form>

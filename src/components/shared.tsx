@@ -12,28 +12,24 @@ export interface ButtonProps extends ContainerProps {
   target?: string;
 }
 
-export const Container: Component<ContainerProps> = ({
-  children,
-  class: className = "",
-}) => {
-  const composedStyle = `max-w-4xl px-8 mx-auto ${className}`;
-  return <div class={composedStyle}>{children}</div>;
+export const Container: Component<ContainerProps> = (props) => {
+  return <div class={`max-w-4xl px-8 mx-auto ${props.class ?? ""}`}>{props.children}</div>;
 };
 
-export function ButtonLink({
-  children,
-  target,
-  to = "#",
-  class: className = "",
-}: ButtonProps) {
-  const composedStyle = `
-    uppercase inline-block px-8 py-2 text-sm font-medium transition border border-current
-    rounded hover:scale-110 hover:shadow-xl active:opacity-50
-    focus:outline-none focus:ring ${className}
-  `;
+export const buttonStyle = `
+  uppercase inline-block px-8 py-2 text-sm font-medium transition border border-current
+  rounded hover:scale-110 hover:shadow-xl active:opacity-50
+  focus:outline-none focus:ring
+`;
+
+export function ButtonLink(props: ButtonProps) {
   return (
-    <A class={composedStyle} href={to} target={target}>
-      {children}
+    <A
+      class={`${buttonStyle} ${props.class}`}
+      href={props.to ?? "#"}
+      target={props.target}
+    >
+      {props.children}
     </A>
   );
 }

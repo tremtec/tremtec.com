@@ -21,7 +21,7 @@ By default, `npm run build` will generate a Node app that you can run with `npm 
 
 ## Tasks
 
-- [ ] setup Prettier (maybe eslint)
+- [x] setup linter (eslint)
 - [ ] setup git hooks + lint-staged
 - [ ] setup vitest
 - [x] setup paths
