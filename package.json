@@ -11,6 +11,7 @@
   },
   "type": "module",
   "devDependencies": {
+    "@solidjs/testing-library": "^0.7.0",
     "@typescript-eslint/eslint-plugin": "^5.58.0",
     "@typescript-eslint/parser": "^5.58.0",
     "autoprefixer": "^10.4.13",
@@ -34,7 +35,6 @@
   "dependencies": {
     "@solidjs/meta": "^0.28.2",
     "@solidjs/router": "^0.8.2",
-    "@solidjs/testing-library": "^0.7.0",
     "solid-js": "^1.7.2",
     "solid-start": "^0.2.26",
     "undici": "^5.15.1",
