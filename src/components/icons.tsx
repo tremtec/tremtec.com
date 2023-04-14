@@ -1,12 +1,12 @@
 import { createMemo } from "solid-js";
 
-type Sizes = "base" | "sm" | "lg";
+export type Sizes = "base" | "sm" | "lg";
 
 interface Props {
   size: Sizes;
 }
 
-const widthMap: Record<Sizes, number> = {
+export const widthMap: Record<Sizes, number> = {
   sm: 32,
   base: 64,
   lg: 80,
