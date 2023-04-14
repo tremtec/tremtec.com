@@ -1,9 +1,10 @@
-import { expect, test } from "vitest";
+import { render } from "@solidjs/testing-library";
+import { describe, expect, it } from "vitest";
+import Root from "./root";
 
-test("should render root tempalte", () => {
-  expect(1).toBe(+"1");
-});
-
-test("should render navbar and logo", () => {
-  expect(1).toBe(parseInt("1"));
+describe("<Root /> component", () => {
+  it("should be rendering root", () => {
+    const result = render(() => <Root />, {});
+    expect(result).not.toBeNull();
+  });
 });

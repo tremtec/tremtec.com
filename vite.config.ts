@@ -6,7 +6,17 @@ import { defineConfig } from "vite";
 
 export default defineConfig({
   plugins: [solid({ adapter: vercel({}) }), eslint()],
+  resolve: {
+    conditions: ["development", "browser"],
+  },
   test: {
-    dir: "./src/",
+    globals: true,
+    environment: "jsdom",
+    transformMode: {
+      web: [/\.[jt]sx?$/],
+    },
+    deps: {
+      inline: [/solid-js/],
+    },
   },
 });
