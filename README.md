@@ -2,6 +2,8 @@
 
 TremTec Web App made with `solid-start`, `tailwincss`, `vite`.
 
+You can see the production version in [tremtec.com](https://tremtec.com)
+
 ## Developing
 
 Once you've created a project and installed dependencies with `pnpm install`, start a development server:
