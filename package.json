@@ -4,9 +4,10 @@
     "dev": "solid-start dev",
     "build": "pnpm fmt && solid-start build",
     "fmt": "eslint --fix src",
-    "test": "vitest",
     "prepare": "husky install",
-    "start": "solid-start start"
+    "start": "solid-start start",
+    "test": "vitest run",
+    "test-watch": "vitest"
   },
   "type": "module",
   "devDependencies": {
