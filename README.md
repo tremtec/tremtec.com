@@ -32,4 +32,8 @@ By default, `npm run build` will generate a Node app that you can run with `npm 
 - [x] add a CTA
 - [x] move text to settings
 - [x] setup vitest
-- [ ] add some animation
+- [x] add some animation
+- [ ] add i18n support
+- [ ] add auth area
+- [ ] add `/labs`
+
