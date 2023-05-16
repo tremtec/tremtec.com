@@ -8,7 +8,7 @@ type InputField = {
 export const siteTexts = {
   header: (
     <p>
-      Build <span class="text-sky-400">your produt</span>
+      Build <span class="text-sky-400">your product</span>
     </p>
   ),
   subheader: (
