@@ -6,6 +6,9 @@ dist
 .netlify
 netlify
 
+# credentials
+/.env
+
 # dependencies
 /node_modules
 

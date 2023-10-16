@@ -5,7 +5,7 @@ import vercel from "solid-start-vercel";
 import { defineConfig } from "vite";
 
 export default defineConfig({
-  plugins: [solid({ adapter: vercel({}) }), eslint()],
+  plugins: [solid({ adapter: vercel({}) }), eslint({ fix: true })],
   resolve: {
     conditions: ["development", "browser"],
   },

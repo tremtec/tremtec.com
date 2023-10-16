@@ -1,4 +1,5 @@
 import { JSX } from "solid-js";
+import { z } from "zod";
 
 type InputField = {
   label: string;
@@ -122,3 +123,9 @@ export const services: Service[] = [
     ),
   },
 ];
+
+const configSchema = z.object({
+  BUILDER_PUBLIC_API_KEY: z.string().min(1),
+});
+
+export const config = configSchema.parse(process.env);

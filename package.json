@@ -2,6 +2,8 @@
   "name": "tremtec.com",
   "scripts": {
     "dev": "solid-start dev",
+    "enc": "gpg -c .env",
+    "dec": "gpg -d .env.gpg > .env",
     "build": "pnpm fmt && solid-start build",
     "fmt": "eslint --fix src",
     "prepare": "husky install",
