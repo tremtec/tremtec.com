@@ -13,9 +13,8 @@ const contactFormSchema = zfd.formData({
 export default function ContactSection() {
   const [, { Form }] = createRouteAction(async (formData: FormData) => {
     // FIXME: handle error and show on the screen
-    const { email, message, subject } = await contactFormSchema.parseAsync(
-      formData
-    );
+    const form = await contactFormSchema.parseAsync(formData);
+    const { email, message, subject } = form;
 
     const params = new URLSearchParams({ subject, cc: email, body: message });
     const mailtoURL = `${siteTexts.mailTo}?${params.toString()}`;
@@ -33,9 +32,11 @@ export default function ContactSection() {
         <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-center text-gray-900 dark:text-white">
           {siteTexts.contactTitle}
         </h2>
+
         <p class="mb-8 lg:mb-16 font-light text-center text-gray-500 dark:text-gray-400 sm:text-xl">
           {siteTexts.contactSubTitle}
         </p>
+
         <Form class="space-y-8">
           <div>
             <label

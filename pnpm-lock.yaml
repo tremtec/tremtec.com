@@ -1,6 +1,13 @@
 lockfileVersion: "6.0"
 
+settings:
+  autoInstallPeers: true
+  excludeLinksFromLockfile: false
+
 dependencies:
+  "@builder.io/sdk-solid":
+    specifier: ^0.6.2
+    version: 0.6.2(solid-js@1.7.2)
   "@solidjs/meta":
     specifier: ^0.28.2
     version: 0.28.2(solid-js@1.7.2)
@@ -1519,6 +1526,18 @@ packages:
       "@babel/helper-string-parser": 7.19.4
       "@babel/helper-validator-identifier": 7.19.1
       to-fast-properties: 2.0.0
+
+  /@builder.io/sdk-solid@0.6.2(solid-js@1.7.2):
+    resolution:
+      {
+        integrity: sha512-CJq3Yv5WKvfYsi9S6Wy5amZ19Nobn4etC+AjCDbiPO77RQJs+YL5+a2Kp4yWdxnUlpPIx6wr2tOw/mu0zj1qBA==,
+      }
+    peerDependencies:
+      solid-js: ^1.6.0
+    dependencies:
+      solid-js: 1.7.2
+      solid-styled-components: 0.27.6(solid-js@1.7.2)
+    dev: false
 
   /@esbuild/android-arm64@0.16.17:
     resolution:
@@ -4773,6 +4792,17 @@ packages:
       slash: 3.0.0
     dev: true
 
+  /goober@2.1.13(csstype@3.1.2):
+    resolution:
+      {
+        integrity: sha512-jFj3BQeleOoy7t93E9rZ2de+ScC4lQICLwiAQmKMg9F6roKGaLSHoCDYKkWlSafg138jejvq/mTdvmnwDQgqoQ==,
+      }
+    peerDependencies:
+      csstype: ^3.0.10
+    dependencies:
+      csstype: 3.1.2
+    dev: false
+
   /gopd@1.0.1:
     resolution:
       {
@@ -7074,6 +7104,19 @@ packages:
       - "@vue/composition-api"
       - supports-color
       - vue
+
+  /solid-styled-components@0.27.6(solid-js@1.7.2):
+    resolution:
+      {
+        integrity: sha512-OHRKLNu54rdAQ19iKc3ZKepn7r5Opd9kCBrE39RDNJBS+jFe9hgK3qiuwGSNoNmePdZXI31ztzM+AlaDIvzE5A==,
+      }
+    peerDependencies:
+      solid-js: ^1.3.3
+    dependencies:
+      csstype: 3.1.2
+      goober: 2.1.13(csstype@3.1.2)
+      solid-js: 1.7.2
+    dev: false
 
   /source-map-js@1.0.2:
     resolution:
