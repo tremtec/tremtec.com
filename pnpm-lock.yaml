@@ -43,6 +43,9 @@ devDependencies:
   autoprefixer:
     specifier: ^10.4.13
     version: 10.4.13(postcss@8.4.21)
+  daisyui:
+    specifier: ^3.9.2
+    version: 3.9.2
   eslint:
     specifier: ^8.38.0
     version: 8.38.0
@@ -3520,6 +3523,13 @@ packages:
       }
     hasBin: true
 
+  /colord@2.9.3:
+    resolution:
+      {
+        integrity: sha512-jeC1axXpnb0/2nn/Y1LPuLdgXBLH7aDcHu4KEKfqw3CUhX7ZpfBSlPKyqXE6btIgEzfWtrX3/tyBCaCvXvMkOw==,
+      }
+    dev: true
+
   /colorette@2.0.19:
     resolution:
       {
@@ -3652,6 +3662,16 @@ packages:
       which: 2.0.2
     dev: true
 
+  /css-selector-tokenizer@0.8.0:
+    resolution:
+      {
+        integrity: sha512-Jd6Ig3/pe62/qe5SBPTN8h8LeUg/pT4lLgtavPf7updwwHpvFzxvOQBHYj2LZDMjUnBzgvIUSjRcf6oT5HzHFg==,
+      }
+    dependencies:
+      cssesc: 3.0.0
+      fastparse: 1.1.2
+    dev: true
+
   /cssesc@3.0.0:
     resolution:
       {
@@ -3682,6 +3702,22 @@ packages:
       {
         integrity: sha512-I7K1Uu0MBPzaFKg4nI5Q7Vs2t+3gWWW648spaF+Rg7pI9ds18Ugn+lvg4SHczUdKlHI5LWBXyqfS8+DufyBsgQ==,
       }
+
+  /daisyui@3.9.2:
+    resolution:
+      {
+        integrity: sha512-yJZ1QjHUaL+r9BkquTdzNHb7KIgAJVFh0zbOXql2Wu0r7zx5qZNLxclhjN0WLoIpY+o2h/8lqXg7ijj8oTigOw==,
+      }
+    engines: { node: ">=16.9.0" }
+    dependencies:
+      colord: 2.9.3
+      css-selector-tokenizer: 0.8.0
+      postcss: 8.4.21
+      postcss-js: 4.0.1(postcss@8.4.21)
+      tailwindcss: 3.2.4(postcss@8.4.21)
+    transitivePeerDependencies:
+      - ts-node
+    dev: true
 
   /data-urls@4.0.0:
     resolution:
@@ -4444,6 +4480,13 @@ packages:
     resolution:
       {
         integrity: sha512-DCXu6Ifhqcks7TZKY3Hxp3y6qphY5SJZmrWMDrKcERSOXWQdMhU9Ig/PYrzyw/ul9jOIyh0N4M0tbC5hodg8dw==,
+      }
+    dev: true
+
+  /fastparse@1.1.2:
+    resolution:
+      {
+        integrity: sha512-483XLLxTVIwWK3QTrMGRqUfUpoOs/0hbQrl2oz4J0pAcm3A3bu84wxTFqGqkJzewCLdME38xJLJAxBABfQT8sQ==,
       }
     dev: true
 
