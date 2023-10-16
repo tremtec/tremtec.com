@@ -2,7 +2,7 @@ import { getContent, RenderContent } from "@builder.io/sdk-solid";
 import { createEffect, createSignal } from "solid-js";
 import { config } from "~/settings";
 
-const { BUILDER_PUBLIC_API_KEY } = config;
+const { VITE_BUILDER_API_KEY: VITE_BUILDER_API_KEY } = config;
 
 export const setupBuilderIO = () => {
   const [content, setContent] = createSignal(null);
@@ -10,7 +10,7 @@ export const setupBuilderIO = () => {
   createEffect(() => {
     getContent({
       model: "page",
-      apiKey: BUILDER_PUBLIC_API_KEY,
+      apiKey: VITE_BUILDER_API_KEY,
       userAttributes: {
         urlPath: window.location.pathname,
       },
@@ -24,6 +24,6 @@ export const setupBuilderIO = () => {
 
 export const BuilderPageContent: typeof RenderContent = (props) => {
   return (
-    <RenderContent model="page" apiKey={BUILDER_PUBLIC_API_KEY} {...props} />
+    <RenderContent model="page" apiKey={VITE_BUILDER_API_KEY} {...props} />
   );
 };
