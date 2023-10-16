@@ -41,8 +41,11 @@ export const siteTexts = {
       label: "Subject",
       placeholder: "Let us know how we can help you",
     },
-    submit: { label: "Send message", placeholder: "" },
+    submit: { label: "Let's chat", placeholder: "" },
   } satisfies Record<string, InputField>,
+  toasts: {
+    sendingEmail: "💌 Opening your email app",
+  },
 };
 
 export type Service = {

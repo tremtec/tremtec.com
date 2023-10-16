@@ -1,3 +1,4 @@
+import { createEffect, createMemo, createSignal, For, Show } from "solid-js";
 import { createRouteAction } from "solid-start";
 import { z } from "zod";
 import { zfd } from "zod-form-data";
@@ -11,16 +12,41 @@ const contactFormSchema = zfd.formData({
 });
 
 export default function ContactSection() {
-  const [, { Form }] = createRouteAction(async (formData: FormData) => {
-    // FIXME: handle error and show on the screen
-    const form = await contactFormSchema.parseAsync(formData);
-    const { email, message, subject } = form;
+  const [formRequest, { Form }] = createRouteAction(
+    async (formData: FormData) => {
+      const form = await contactFormSchema.safeParseAsync(formData);
 
-    const params = new URLSearchParams({ subject, cc: email, body: message });
-    const mailtoURL = `${siteTexts.mailTo}?${params.toString()}`;
+      if (!form.success) {
+        return form.error.flatten((issue) => ({
+          message: issue.message,
+          code: issue.code,
+        }));
+      }
 
-    // open mailto URL
-    window.location.replace(mailtoURL);
+      const { email, message, subject } = form.data;
+      const params = new URLSearchParams({ subject, cc: email, body: message });
+      const query = params.toString().replaceAll("+", " ");
+      const mailtoURL = `${siteTexts.mailTo}?${query}`;
+
+      console.log(mailtoURL);
+
+      // open mailto URL
+      window.location.replace(mailtoURL);
+      return true;
+    }
+  );
+
+  const [didSubmit, setDidSubmit] = createSignal(false);
+  const errors = createMemo(() => {
+    if (formRequest.result == true) {
+      return {};
+    }
+    // eslint-disable-next-line
+    return formRequest.result?.fieldErrors as any;
+  });
+
+  createEffect(() => {
+    setDidSubmit(formRequest.result === true);
   });
 
   return (
@@ -53,7 +79,13 @@ export default function ContactSection() {
               placeholder={siteTexts.inputs.email.placeholder}
               required
             />
+            <Show when={errors()}>
+              <For each={errors()["email"]}>
+                {(item) => <p class="text-red-200 text-sm">{item?.message}</p>}
+              </For>
+            </Show>
           </div>
+
           <div>
             <label
               for="subject"
@@ -69,7 +101,13 @@ export default function ContactSection() {
               placeholder={siteTexts.inputs.subject.placeholder}
               required
             />
+            <Show when={errors()}>
+              <For each={errors()["subject"]}>
+                {(item) => <p class="text-red-200 text-sm">{item?.message}</p>}
+              </For>
+            </Show>
           </div>
+
           <div class="sm:col-span-2">
             <label
               for="message"
@@ -84,14 +122,29 @@ export default function ContactSection() {
               class="textarea w-full max-w-full"
               placeholder={siteTexts.inputs.message.placeholder}
             />
+            <Show when={errors()}>
+              <For each={errors()["message"]}>
+                {(item) => <p class="text-red-200 text-sm">{item?.message}</p>}
+              </For>
+            </Show>
           </div>
+
           <button
             type="submit"
-            class="py-3 px-5 text-sm font-medium text-center text-white rounded-lg bg-primary-700 sm:w-fit hover:bg-primary-800 focus:ring-4 focus:outline-none focus:ring-primary-300 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800"
+            class="btn btn-primary"
+            disabled={formRequest.pending}
           >
             {siteTexts.inputs.submit.label}
           </button>
         </Form>
+
+        <Show when={didSubmit()}>
+          <div class="toast">
+            <div class="alert alert-info">
+              <span>{siteTexts.toasts.sendingEmail}</span>
+            </div>
+          </div>
+        </Show>
       </Container>
     </section>
   );
