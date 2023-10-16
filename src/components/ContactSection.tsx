@@ -49,7 +49,7 @@ export default function ContactSection() {
               type="email"
               name="email"
               id="email"
-              class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light"
+              class="input w-full w-full"
               placeholder={siteTexts.inputs.email.placeholder}
               required
             />
@@ -65,7 +65,7 @@ export default function ContactSection() {
               type="text"
               id="subject"
               name="subject"
-              class="block p-3 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 shadow-sm focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light"
+              class="input w-full w-full"
               placeholder={siteTexts.inputs.subject.placeholder}
               required
             />
@@ -81,7 +81,7 @@ export default function ContactSection() {
               id="message"
               rows="6"
               name="message"
-              class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg shadow-sm border border-gray-300 focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
+              class="textarea w-full max-w-full"
               placeholder={siteTexts.inputs.message.placeholder}
             />
           </div>
