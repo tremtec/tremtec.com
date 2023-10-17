@@ -1,5 +1,7 @@
 import { Component, ParentProps } from "solid-js";
 import { A } from "solid-start";
+import { siteTexts } from "~/settings";
+import { Logo } from "./icons";
 
 export type ChildrenProps = ParentProps;
 
@@ -41,5 +43,21 @@ export function NotFound(props: ChildrenProps) {
       </h2>
       {props.children}
     </div>
+  );
+}
+
+type TremTecLogoProps = {
+  hideOnSmall: boolean;
+};
+export function TremTecLogo(props: TremTecLogoProps) {
+  return (
+    <A href="/" class="flex">
+      <div class="flex items-center gap-2" title="TremTec">
+        <Logo size="sm" />
+        <h3 class={`font-medium ${props.hideOnSmall && "hidden sm:block"}`}>
+          {siteTexts.companyName}
+        </h3>
+      </div>
+    </A>
   );
 }

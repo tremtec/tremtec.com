@@ -1,4 +1,3 @@
-// @refresh reload
 import { For, Suspense } from "solid-js";
 import {
   A,
@@ -12,8 +11,7 @@ import {
   Scripts,
   Title,
 } from "solid-start";
-import { Logo } from "./components/icons";
-import { ButtonLink, Container } from "./components/shared";
+import { ButtonLink, Container, TremTecLogo } from "./components/shared";
 import "./root.css";
 import { siteTexts } from "./settings";
 import { navLinks } from "./shared/settings";
@@ -55,14 +53,7 @@ function NavBar() {
     <nav>
       <Container class="flex flex-row justify-between items-center py-8">
         <div class="flex gap-4 items-center">
-          <A href="/" class="flex">
-            <div class="flex items-center gap-2" title="TremTec">
-              <Logo size="sm" />
-              <h3 class="font-medium hidden sm:block">
-                {siteTexts.companyName}
-              </h3>
-            </div>
-          </A>
+          <TremTecLogo hideOnSmall />
 
           <For each={navLinks}>
             {(link) => (
