@@ -20,16 +20,10 @@ export const Container: Component<ContainerProps> = (props) => {
   );
 };
 
-export const buttonStyle = `
-  uppercase inline-block px-8 py-2 text-sm font-medium transition border border-current
-  rounded hover:scale-110 hover:shadow-xl active:opacity-50
-  focus:outline-none focus:ring
-`;
-
 export function ButtonLink(props: ButtonProps) {
   return (
     <A
-      class={`${buttonStyle} ${props.class}`}
+      class={`btn btn-outline ${props.class}`}
       href={props.to ?? "#"}
       target={props.target}
     >

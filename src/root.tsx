@@ -56,9 +56,11 @@ function NavBar() {
       <Container class="flex flex-row justify-between items-center py-8">
         <div class="flex gap-4 items-center">
           <A href="/" class="flex">
-            <div class="flex items-center gap-2">
+            <div class="flex items-center gap-2" title="TremTec">
               <Logo size="sm" />
-              <h3 class="font-medium">{siteTexts.companyName}</h3>
+              <h3 class="font-medium hidden sm:block">
+                {siteTexts.companyName}
+              </h3>
             </div>
           </A>
 
@@ -67,7 +69,7 @@ function NavBar() {
               <A
                 href={link.href}
                 target={link.target}
-                class="font-thin text-gray-300 px-2 border border-transparent rounded hover:border-gray-300"
+                class="font-thin text-gray-300 border border-transparent rounded hover:border-gray-300"
               >
                 {link.text}
               </A>
@@ -76,7 +78,7 @@ function NavBar() {
         </div>
 
         <div>
-          <ButtonLink to={siteTexts.links.contact}>
+          <ButtonLink to={siteTexts.links.contact} class="btn-primary">
             {siteTexts.ctaPrimaryBtn}
           </ButtonLink>
         </div>

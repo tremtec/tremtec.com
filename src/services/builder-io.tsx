@@ -23,7 +23,6 @@ export const setupBuilderIO = () => {
   const [content, setContent] = createSignal(null);
 
   createEffect(() => {
-    // register(ContactSection, "ContactSection");
     getContent({
       model: "page",
       apiKey: VITE_BUILDER_API_KEY,
