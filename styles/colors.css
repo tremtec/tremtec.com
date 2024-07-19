@@ -1,0 +1,54 @@
+
+:root {
+    --color-base-green-700: #007a1c; 
+    --color-border-neutral-faded: #eceef3; 
+    --color-border-positive: #007a1c; /* Positive border color. */
+    --color-base-blue-700: #014ee1; 
+    --color-foreground-neutral: #000000; /* Neutral foreground color. Use for icons and text. */
+    --color-border-neutral: #e6e8ef; /* Default border used for outlining elements. */
+    --color-background-page: #ffffff; /* Primary background for pages. */
+    --color-foreground-neutral-faded: #606981; /* Subtle foreground color. Use for secondary or placeholder text. */
+    --color-foreground-primary: #104fc6; 
+    --color-foreground-secondary: #874ce6; /* Primary foreground color. Use for accent components and text. */
+    --color-foreground-disabled: #c6ccdb; /* Use for disabled foreground components and text. */
+    --color-foreground-positive: #007a1c; /* Positive foreground color. Use for positive components and text (i.e. Success message) */
+    --color-border-secondary: #874ce6; /* Secondary border color. */
+    --color-border-focus: #5292ff; /* Border color for focus states. */
+    --color-border-secondary-faded: #d9c8f5; /* Secondary positive border color. */
+    --color-border-primary: #014ee1; /* Primary border color. */
+    --color-border-primary-faded: #d1e2ff; /* Subtle primary border color. */
+    --color-border-positive-faded: #b4e9c5; /* Subtle positive border color. */
+    --color-background-secondary: #874ce6; /* Background for components using a secondary (accent) color. */
+    --color-background-neutral: #f6f7f9; /* Secondary (alternate) background for pages or other components. */
+    --color-background-secondary-highlighted: #a275ea; /* Highlighted background for components using a secondary color, for example, a hover state. */
+    --color-background-secondary-faded: #f5f2fd; /* Light background for components used with secondary color. Can be combined with Foreground / Secondary. */
+    --color-background-primary: #014ee1; /* Background for primary components. */
+    --color-background-positive: #007a1c; /* Background for components used with a positive semantic meaning. */
+    --color-background-primary-highlighted: #1062fe; /* Highlighted background for primary components, for example, a hover state. */
+    --color-background-positive-highlighted: #35a24f; /* Highlighted background for positive components, for example, a hover state. */
+    --color-background-primary-faded: #ecf5ff; /* Light background for primary components. Can be combined with Foreground / Primary. */
+    --color-background-positive-faded: #ebfef6; /* Light background for components used with a positive semantic meaning. Can be combined with Foreground / Positive. */
+    --color-base-white: #ffffff; 
+    --color-base-gray-200: #f6f7f9; 
+    --color-base-black: #000000; 
+    --color-base-gray-300: #e6e8ef; 
+    --color-base-gray-500: #c6ccdb; 
+    --color-base-gray-600: #7f8594; 
+    --color-base-gray-700: #606981; 
+    --color-base-purple-200: #f5f2fd; 
+    --color-base-purple-300: #d9c8f5; 
+    --color-base-purple-500: #be9ff0; 
+    --color-base-purple-600: #a275ea; 
+    --color-base-purple-700: #874ce6; 
+    --color-base-blue-200: #ecf5ff; 
+    --color-base-blue-300: #d1e2ff; 
+    --color-base-blue-500: #5292ff; 
+    --color-base-blue-600: #1062fe; 
+    --color-base-green-200: #ebfef6; 
+    --color-base-green-300: #b4e9c5; 
+    --color-base-green-500: #6ac883; 
+    --color-base-green-600: #35a24f; 
+    --color-background-blur: #ffffffcc; /* For use in combination with Blur tokens. */
+    --color-background-blur-neutral: #606981cc; /* For use in combination with Blur tokens. */
+    --color-on-background-primary: #ffffff; /* To be used on Primary and Primary Highlighted background colors. */
+}
