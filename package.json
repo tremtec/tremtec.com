@@ -4,7 +4,8 @@
   "scripts": {
     "w": "wrangler2",
     "fmt": "biome format --fix",
-    "lint": "biome lint --fix",
+    "lint": "biome lint --fix --unsafe",
+    "fix": "biome format --fix && biome lint --fix --unsafe",
     "dev": "vinxi dev",
     "build": "vinxi build",
     "start": "vinxi start",

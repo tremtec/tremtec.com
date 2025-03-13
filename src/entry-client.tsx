@@ -1,4 +1,10 @@
 // @refresh reload
-import { mount, StartClient } from "@solidjs/start/client";
+import { StartClient, mount } from "@solidjs/start/client";
 
-mount(() => <StartClient />, document.getElementById("app")!);
+const appElement = document.getElementById("app");
+
+if (!appElement) {
+  throw new Error("App element not found");
+}
+
+mount(() => <StartClient />, appElement);
