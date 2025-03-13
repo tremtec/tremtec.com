@@ -18,8 +18,6 @@ export default createHandler(() => (
           />
           <meta name="author" content="TremTec Team" />
 
-          <title>TremTec - Home</title>
-
           <link rel="icon" href="/favicon.ico" />
 
           {assets}
