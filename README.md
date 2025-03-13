@@ -1,32 +1,37 @@
-# SolidStart
+# TremTec
 
-Everything you need to build a Solid project, powered by [`solid-start`](https://start.solidjs.com);
+Welcome to TremTec, your trusted partner in innovative technology solutions. We are committed to delivering cutting-edge services and products that drive success and efficiency for businesses worldwide.
 
-## Creating a project
+## About Us
 
-```bash
-# create a new project in the current directory
-npm init solid@latest
+At TremTec, we specialize in providing top-notch technology solutions tailored to meet the unique needs of our clients. Our team of experts is dedicated to ensuring that our solutions are not only effective but also sustainable and scalable.
 
-# create a new project in my-app
-npm init solid@latest my-app
-```
+## Our Services
 
-## Developing
+- **Custom Software Development**: We build software solutions that are designed to solve your specific business challenges.
+- **Cloud Solutions**: Our cloud services help you leverage the power of the cloud to enhance your business operations.
+- **IT Consulting**: We offer expert advice to help you make informed technology decisions.
+- **Cybersecurity**: Protect your business with our comprehensive cybersecurity solutions.
 
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+## Our Mission
 
-```bash
-npm run dev
+Our mission is to empower businesses through innovative technology solutions that enhance productivity and drive growth. We strive to be a leader in the tech industry by consistently delivering exceptional value to our clients.
 
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
-```
+## Contact Us
 
-## Building
+We would love to hear from you! Whether you have a question about our services or need support, feel free to reach out to us.
 
-Solid apps are built with _presets_, which optimise your project for deployment to different environments.
+- **Email**: contact@tremtec.com
+- **Phone**: +55 (37) 99121-9019
+- **Address**: 127.0.0.1
 
-By default, `npm run build` will generate a Node app that you can run with `npm start`. To use a different preset, add it to the `devDependencies` in `package.json` and specify in your `app.config.js`.
+## Follow Us
 
-## This project was created with the [Solid CLI](https://solid-cli.netlify.app)
+Stay connected with us through our social media channels:
+
+- [LinkedIn](https://www.linkedin.com/company/tremtec)
+- [Twitter](https://twitter.com/tremtec)
+- [Facebook](https://www.facebook.com/tremtec)
+
+Thank you for choosing TremTec. We look forward to partnering with you on your journey to success.
+
