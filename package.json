@@ -24,6 +24,7 @@
     "@cloudflare/workers-types": "^4.20250312.0",
     "@tailwindcss/vite": "^4.0.7",
     "lefthook": "^1.11.3",
+    "lint-staged": "^15.5.0",
     "tailwindcss": "^4.0.7",
     "wrangler": "^4.0.0"
   },
@@ -31,5 +32,11 @@
     "bun": "1.2.5",
     "node": "22.13.0"
   },
-  "trustedDependencies": ["@parcel/watcher"]
+  "trustedDependencies": ["@parcel/watcher"],
+  "lint-staged": {
+    "*.{json,js,ts,jsx,tsx,yml,yaml}": [
+      "biome format --fix",
+      "biome lint --fix --unsafe"
+    ]
+  }
 }

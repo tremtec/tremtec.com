@@ -1,7 +1,7 @@
 pre-commit:
   jobs:
     - name: formatter
-      run: npm run fix
+      run: npx lint-staged
 
     # - name: lint backend
     #   run: bundle exec rubocop --force-exclusion {all_files}
