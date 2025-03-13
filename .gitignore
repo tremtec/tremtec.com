@@ -5,6 +5,7 @@ dist
 .vercel
 .netlify
 .vinxi
+app.config.timestamp_*.js
 
 # Environment
 .env
@@ -26,3 +27,7 @@ gitignore
 # System Files
 .DS_Store
 Thumbs.db
+
+# wrangler files
+.wrangler
+.dev.vars*
